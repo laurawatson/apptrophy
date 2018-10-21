@@ -1,6 +1,6 @@
-class CreateCreateImages < ActiveRecord::Migration[5.2]
+class CreateImages < ActiveRecord::Migration[5.2]
   def change
-    create_table :create_images do |t|
+    create_table :images do |t|
       t.string :file
       t.string :view_count
       t.references :user, foreign_key: true
