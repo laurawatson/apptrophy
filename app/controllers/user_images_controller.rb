@@ -4,12 +4,13 @@ class UserImagesController < ApplicationController
   # GET /user_images
   # GET /user_images.json
   def index
-    @user_images = UserImage.all
+    @user_images = current_user.user_images
   end
 
   # GET /user_images/1
   # GET /user_images/1.json
   def show
+    @user_image.increment!(:view_count)
   end
 
   # GET /user_images/new

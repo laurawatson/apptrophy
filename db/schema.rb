@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2018_10_21_201053) do
 
   create_table "user_images", force: :cascade do |t|
     t.string "image"
-    t.string "view_count"
+    t.integer "view_count"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

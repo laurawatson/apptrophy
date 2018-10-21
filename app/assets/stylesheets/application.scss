@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+.low-image {
+  filter: blur(1px);
+}
+
+.low-med-image {
+  filter: blur(3px);
+}
+
+.high-med-image {
+  filter: blur(6px);
+}
+
+.high-image {
+  filter: blur(1.5rem);
+}
