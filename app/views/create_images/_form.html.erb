@@ -1,0 +1,32 @@
+<%= form_with(model: create_image, local: true) do |form| %>
+  <% if create_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(create_image.errors.count, "error") %> prohibited this create_image from being saved:</h2>
+
+      <ul>
+      <% create_image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :file %>
+    <%= form.text_field :file %>
+  </div>
+
+  <div class="field">
+    <%= form.label :view_count %>
+    <%= form.text_field :view_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

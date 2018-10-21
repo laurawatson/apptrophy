@@ -1,0 +1,2 @@
+module CreateImagesHelper
+end
