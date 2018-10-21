@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  file: MyString
+  image: MyString
   view_count: MyString
   user: one
 
 two:
-  file: MyString
+  image: MyString
   view_count: MyString
   user: two

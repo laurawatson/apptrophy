@@ -1,10 +1,10 @@
-<%= form_with(model: image, local: true) do |form| %>
-  <% if image.errors.any? %>
+<%= form_with(model: user_image, local: true) do |form| %>
+  <% if user_image.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(image.errors.count, "error") %> prohibited this image from being saved:</h2>
+      <h2><%= pluralize(user_image.errors.count, "error") %> prohibited this user_image from being saved:</h2>
 
       <ul>
-      <% image.errors.full_messages.each do |message| %>
+      <% user_image.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :file %>
-    <%= form.text_field :file %>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="field">
     <%= form.label :view_count %>
-    <%= form.file_field :view_count %>
+    <%= form.text_field :view_count %>
   </div>
 
   <div class="field">
