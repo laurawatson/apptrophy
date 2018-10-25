@@ -26,7 +26,6 @@ class UserImagesController < ApplicationController
   # POST /user_images.json
   def create
     @user_image = UserImage.new(user_image_params)
-
     respond_to do |format|
       if @user_image.save
         format.html { redirect_to @user_image, notice: 'User image was successfully created.' }
@@ -70,6 +69,7 @@ class UserImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_image_params
-      params.require(:user_image).permit(:image, :view_count, :user_id)
+      params.require(:user_image).permit(:image, :view_count).
+        merge(user: current_user)
     end
 end

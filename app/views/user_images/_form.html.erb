@@ -1,4 +1,5 @@
-<%= form_with(model: user_image, local: true) do |form| %>
+<%= form_for(user_image, local: true) do |form| %>
+  <%= hidden_field_tag :user_image_user_id, current_user.id %>
   <% if user_image.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user_image.errors.count, "error") %> prohibited this user_image from being saved:</h2>
@@ -14,16 +15,6 @@
   <div class="field">
     <%= form.label :image %>
     <%= form.file_field :image %>
-  </div>
-
-  <div class="field">
-    <%= form.label :view_count %>
-    <%= form.text_field :view_count %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
   </div>
 
   <div class="actions">

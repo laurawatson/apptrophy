@@ -15,9 +15,7 @@
   <tbody>
     <% @user_images.each do |user_image| %>
       <tr>
-        <td><%= user_image.image %></td>
-        <td><%= user_image.view_count %></td>
-        <td><%= user_image.user %></td>
+        <td><%= image_tag(user_image.image.url, alt: 'Image', class: image_classname(user_image.view_count), size: "50x50") %></td>
         <td><%= link_to 'Show', user_image %></td>
         <td><%= link_to 'Edit', edit_user_image_path(user_image) %></td>
         <td><%= link_to 'Destroy', user_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
