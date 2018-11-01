@@ -1,8 +1,11 @@
 require 'test_helper'
 
 class UserImagesControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     @user_image = user_images(:one)
+    sign_in users(:one)
   end
 
   test "should get index" do
